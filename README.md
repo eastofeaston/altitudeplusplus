@@ -1,6 +1,6 @@
 # Altitude++
 
-Unofficial apps for [Altitude+](https://www.altitudeplus.com), the streaming service for Altitude Sports in Colorado. They put the 24/7 channel first and keep Avalanche and Nuggets replays, postgame shows, and highlights a click away.
+Unofficial apps for [Altitude+](https://www.altitudeplus.com), the streaming service for Altitude Sports in Colorado. Their official apps have become somewhat cluttered over the last few years; this streamlines the interface and focus in on what's most important.
 
 ![Altitude++ on Apple TV](appletv/docs/screenshots/live.jpg)
 
