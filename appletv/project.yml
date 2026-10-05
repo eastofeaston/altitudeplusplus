@@ -1,0 +1,45 @@
+name: AltitudePlusPlus
+options:
+  deploymentTarget:
+    tvOS: "17.0"
+  createIntermediateGroups: true
+# Team and bundle ID come from Config/Signing.xcconfig, which includes your
+# git-ignored Config/Local.xcconfig. Don't set them in this file: target
+# settings here would override the xcconfig.
+configFiles:
+  Debug: Config/Signing.xcconfig
+  Release: Config/Signing.xcconfig
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+targets:
+  AltitudePlusPlus:
+    type: application
+    platform: tvOS
+    sources:
+      - path: AltitudePlusPlus
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: $(APP_BUNDLE_ID)
+        INFOPLIST_FILE: AltitudePlusPlus/Resources/Info.plist
+        ASSETCATALOG_COMPILER_APPICON_NAME: "App Icon & Top Shelf Image"
+        CODE_SIGN_STYLE: Automatic
+        TARGETED_DEVICE_FAMILY: "3"
+    scheme:
+      testTargets:
+        - AltitudePlusPlusUITests
+  AltitudePlusPlusUITests:
+    type: bundle.ui-testing
+    platform: tvOS
+    sources:
+      - path: AltitudePlusPlusUITests
+    dependencies:
+      - target: AltitudePlusPlus
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: $(APP_BUNDLE_ID).uitests
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_TARGET_NAME: AltitudePlusPlus
+        TARGETED_DEVICE_FAMILY: "3"

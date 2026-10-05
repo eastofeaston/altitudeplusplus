@@ -1,0 +1,5 @@
+.DS_Store
+build/
+
+# Python bytecode from tools/
+__pycache__/

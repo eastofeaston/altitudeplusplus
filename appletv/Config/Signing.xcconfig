@@ -1,0 +1,13 @@
+// Signing settings shared by every build.
+//
+// Don't put your own team here. tools/install-tv.sh writes Config/Local.xcconfig
+// (git-ignored) with your Apple team ID and a bundle ID unique to that team.
+// To build from Xcode without the script, create Config/Local.xcconfig with:
+//
+//     DEVELOPMENT_TEAM = <your team ID>
+//     APP_BUNDLE_ID = com.altitudeplusplus.tv.<something unique>
+
+DEVELOPMENT_TEAM =
+APP_BUNDLE_ID = com.altitudeplusplus.tv.unsigned
+
+#include? "Local.xcconfig"
